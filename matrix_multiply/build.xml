@@ -1,0 +1,19 @@
+<project name="MatrixMult" default="jar">
+    <property name="src.dir" value="src" />
+    <property name="build.dir" value="build" />
+    <property name="jar.dir" value="jar" />
+
+    <target name="compile">
+        <mkdir dir="${build.dir}" />
+        <javac srcdir="${src.dir}" destdir="${build.dir}" />
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}" />
+        <jar destfile="${jar.dir}/MatrixMult.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="MxV" />
+            </manifest>
+        </jar>
+    </target>
+</project>

@@ -12,5 +12,6 @@ jobs:
           java-version: '21'
           distribution: 'graalvm'
       - name: Build with Ant
-        run: ant -noinput -buildfile build.xml
+        run: ant -noinput -buildfile build.xml clean jar test
 
+    

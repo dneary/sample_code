@@ -21,4 +21,8 @@
 	    <delete dir="${build}" />
 	    <delete dir="${jar}" />
     </target>
+
+    <target name="test" depends="jar">
+	    <java jar="${jar.dir}/MatrixMult.jar" fork="true" />
+    </target>
 </project>
